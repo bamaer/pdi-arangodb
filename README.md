@@ -15,12 +15,22 @@ An ArangoDB Database Wizard set up page is included within this plugin. This ena
 
 ## Installation
 
+1. Download the distribution zip from the releases page: https://github.com/Pentaho-SE-EMEA-APAC/pdi-arangodb/releases
+2. Unpack the zip file
+3. Take the pdi-arangodb-VERSION* folder and rename it to pdi-arangodb
+4. Move the folder in to PENTAHO_HOME/client-tools/data-integration/plugins folder
+5. Restart PDI
+6. You will find the ArangoDB steps under the 'Big Data' folder in the step explorer
+
+## Building from source
+
 1. Clone this repo
 2. Install maven
 3. Run mvn -B verify -Dcentral -e
 4. Take the ./target/pdi-arangodb-VERSION.zip file and unzip it's contents in to the PENTAHO_HOME/client-tools/data-integration/plugins folder
-5. Restart PDI
-6. You will find the ArangoDB steps under the 'Big Data' folder in the step explorer
+5. Delete the pdi-arangodb/lib/slf4j*.jar file (it clashes with Pentaho's library)
+6. Restart PDI
+7. You will find the ArangoDB steps under the 'Big Data' folder in the step explorer
 
 ## Samples
 
